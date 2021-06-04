@@ -1,0 +1,20 @@
+{% extends 'basic.html' %}
+{% block content %}
+
+
+<div class="department">
+	{% if user.is_authenticated %}
+	{% csrf_token %}
+	<ul>
+	<li><a href="pdfdisplay">first year</a></li>
+	<li><a href="pdfdisplay2">second year</a></li>
+	<li><a href="pdfdisplay3">third year</a></li>
+	<li><a href="pdfdisplay4">fourth year</a></li>
+	</ul>
+	{% endif %}
+</div>
+
+
+
+
+{% endblock %}

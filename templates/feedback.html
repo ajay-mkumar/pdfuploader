@@ -1,0 +1,29 @@
+{% extends 'basic.html' %}
+{% block content %}
+<div class="feedback">
+	{% if user.is_student or user.is_teacher %}
+<form method="POST" action="feedback" id="fbb">
+	{% csrf_token %}
+    <input type="text" name="name" placeholder="name">
+    <input type="hidden"  name="username" value={{user.username}}>
+    <input type="submit">
+</form>
+<textarea rows="10" cols="30"  name='feedback' placeholder="feedback" form="fbb"></textarea>
+<div>
+	{% for message in messages %}
+	<h5>{{message}}</h5>
+	{% endfor %}
+</div>
+{% else %}
+	{% for fbs in fb %}
+<div class="fbdetails">
+<ul>
+	<p>{{fbs.name}}</p>
+	<li>{{fbs.feedback}}</li><br>
+	<li>user name: {{fbs.username}}</li>
+</ul>
+</div>
+{% endfor %}
+</div>
+{% endif %}
+{% endblock %}

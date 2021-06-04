@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>avc classroom</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<ul class="header">
+	<li>A.V.C classroom</li>
+	{% if user.is_authenticated %}
+	<li>welcome {{user.first_name}}</li>
+	<li><a href="logout">logout</a></li>
+	<li><a href="feedback">feedback</a></li>
+	{% else %}
+	<li><a href="{% url 'login' %}">login</a></li>
+	<li><a href="{% url 'register' %}">rigister</a></li>
+	{% endif %}
+</ul>
+
+	{% if user.is_authenticated %}
+	<div>
+		{% block content %}
+		{% endblock %}
+	</div>
+	{% else %}
+	<div class="bio">
+	<h1>welcome to A.V.C classroom</h1>
+	<p>Don't worry about exams<br>Here you can find your need for your exams</p>
+	<h4>please log in or register to continue</h4>
+	</div>
+	{% endif %}
+
+</body>
+</html>

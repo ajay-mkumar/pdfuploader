@@ -1,0 +1,26 @@
+{% extends 'basic.html' %}
+{% block content %}
+<h1 class="title">third year materials</h1>
+<div class="pdfdisplay">
+
+  {% for pdfs in pdf3 %}
+<div class="griditem"><a href="{{ pdfs.pdf.url }}"><img src="https://static9.depositphotos.com/1157537/1181/v/950/depositphotos_11814381-stock-illustration-ebook-icon-button.jpg"></a><p>{{pdfs.title}}</p></div>
+
+  {% endfor %}
+  
+</div>
+
+<div class="pdfupload">
+<div class="pdfupload">
+	{% if user.is_teacher %}
+<form method="POST", enctype="multipart/form-data">
+	{% csrf_token %}
+	{{frm3.title}}
+	{{frm3.pdf}}
+	<input type="submit" value="upload">
+	{% endif %}
+</form>
+</div>
+</div>
+
+{% endblock %}
