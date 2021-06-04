@@ -2,9 +2,7 @@
     box-sizing:border-box;
 }
 body{
-    /*background-image: url("https://www.planitec.setec.fr/wp-content/uploads/2020/09/E-learning-pour-un-industriel-du-spatial-shutterstock_1139995139.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;*/
+
     background-color: rgba(247, 202, 201,0.3)
 
 }
@@ -30,9 +28,9 @@ body{
 
 }
 .user{
-    position: absolute;
+    position: relative;
     top: 200px;
-    right: 600px;
+    
 }
 .message p{
     font-family: 'Times New Roman', serif;
@@ -113,7 +111,7 @@ form{
 form p{
     margin-top: 50px;
 }
-form a{
+/*form a{
     margin-top: 40px;
     color:white;
     background-color: crimson;
@@ -123,7 +121,7 @@ form a{
     text-decoration: none;
     transform: scale(10);
     transition: all 0.3s ease-in-out 0.2s;
-}
+}*/
 form a:hover{
     color: black;
     transform: scale(10);
@@ -180,21 +178,20 @@ th td{
 input[type=button]:focus{
     outline: none;
 }
-.background p{
+.top p{
     font-family: "Arial Black", Gadget, sans-serif;
     text-transform: uppercase;
-    position: absolute;
-    top: 170px;
-    right: 660px;
+    position: relative;
+    top:  220px;
     font-size: 20px;
 }
-.reset{
+.reset a{
     text-decoration: none;
     color:rgb(35, 197, 143);
-    position: fixed;
+    position: static;
     top: 380px;
     right: 630px;
 }
-.reset:hover{
+.reset a:hover{
     color: black;
 }

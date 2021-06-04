@@ -1,17 +1,23 @@
 {% extends 'base.html' %}
 {% block content %}
+<div class="top">
+    <p>login</p>
+</div>
 <div class="log">
     <title>login</title>
     <div class="background">
-    	<p>login</p>
+    	
 <form action="login" method="POST">
     {% csrf_token %}
     <input type="text" id='aj' name="username" placeholder="username"><br>
     <input type="password" name="password" placeholder="password"><br>
     <input type="submit" value="login"><br>
 </form>
-<a  href="{% url 'password_reset' %}" class="reset">forgot password</a>
 </div>
+<div class="reset">
+<a  href="{% url 'password_reset' %}" >forgot password</a>
+</div>
+
 <div class="message">
     {% for i in messages %}
 
