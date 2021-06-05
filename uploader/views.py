@@ -21,6 +21,8 @@ def login(request):
         username=request.POST['username']
         password=request.POST['password']
 
+        username=username.lower()
+
         user=authenticate(username=username,password=password)
 
         if user is not None:
@@ -48,6 +50,8 @@ def register(request):
         department=request.POST['department']
         password1 = request.POST['password1']
         password2 = request.POST['password2']
+
+        username=username.lower()
 
         if password1==password2:
             if User.objects.filter(username=username):
@@ -98,6 +102,8 @@ def staffregister(request):
         email = request.POST['email']
         password1 = request.POST['password1']
         password2 = request.POST['password2']
+
+        username=username.lower()
 
         if password1==password2:
             if User.objects.filter(username=username):
