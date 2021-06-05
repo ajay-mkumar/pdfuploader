@@ -84,7 +84,7 @@ DATABASES = {
         'NAME': 'avc',
         'USER': 'postgres',
         'PASSWORD': '0911',
-        'HOST': 'localhost',
+        'HOST': '127:0:0:1',
         'PORT':'5432'
     }
 }
