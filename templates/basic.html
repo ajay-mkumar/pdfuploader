@@ -11,7 +11,7 @@
 <ul class="header">
 	<li>A.V.C classroom</li>
 	{% if user.is_authenticated %}
-	<li>welcome {{user.first_name}}</li>
+	<li>welcome {{user.username}}</li>
 	<li><a href="logout">logout</a></li>
 	<li><a href="feedback">feedback</a></li>
 	{% else %}

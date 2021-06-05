@@ -85,7 +85,7 @@ def register(request):
                     [email],
                 )
                 email.send(fail_silently=False)
-                return HttpResponse('please confirm your mail')
+                return render(request,'confirmmail.html')
         else:
             messages.info(request,"password unmatch")
             return redirect('register')

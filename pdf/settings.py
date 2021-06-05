@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-eb6$-4&h3xtoa8#f11xw2=xg_-h=lw#oj4y-_z%*@@fs_f4d*8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['pdfuploader-avc.herokuapp.com','127:0:0:1']
+ALLOWED_HOSTS = ['pdfuploader-avc.herokuapp.com','127:0:0:1','localhost']
 
 
 # Application definition
@@ -80,11 +80,13 @@ WSGI_APPLICATION = 'pdf.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR,'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'avc',
+        'USER': 'postgres',
+        'PASSWORD': '0911',
+        'HOST': 'localhost'
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
