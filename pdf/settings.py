@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'pdf.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'avc',
+        'NAME': 'postgres',
         'USER': 'postgres',
         'PASSWORD': '0911',
         'HOST': 'localhost',
