@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-import os,environ
+import os,environ,dj_database_url,django_heroku
 
 from pathlib import Path
 
@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'pdf.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
+"""DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'postgres',
@@ -87,6 +87,10 @@ DATABASES = {
         'HOST': 'localhost',
         'PORT':'5432'
     }
+}"""
+
+databases={
+    'default':dj_database_url.config()
 }
 
 # Password validation
@@ -135,6 +139,7 @@ STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles')
 
 MEDIA_URL='/media/'
 MEDIA_ROOT=os.path.join(BASE_DIR,'media')
+django_heroku.settings(locals())
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
@@ -146,3 +151,4 @@ EMAIL_PORT=587
 EMAIL_HOST_PASSWORD=env('EMAIL_HOST_PASSWORD')
 AUTH_USER_MODEL='uploader.User'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
