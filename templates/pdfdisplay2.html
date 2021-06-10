@@ -12,7 +12,7 @@
 
 <div class="pdfupload">
 <div class="pdfupload">
-	{% if user.is_teacher %}
+	{% if user.is_teacher or user.is_superuser %}
 <form method="POST", enctype="multipart/form-data">
 	{% csrf_token %}
 	{{frm2.title}}
