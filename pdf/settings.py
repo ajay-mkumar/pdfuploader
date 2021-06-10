@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'pdf.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-"""DATABASES = {
+'''DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'postgres',
@@ -87,9 +87,9 @@ WSGI_APPLICATION = 'pdf.wsgi.application'
         'HOST': 'localhost',
         'PORT':'5432'
     }
-}"""
+}'''
 
-databases={
+DATABASES={
     'default':dj_database_url.config()
 }
 
