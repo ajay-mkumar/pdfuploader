@@ -1,0 +1,193 @@
+
+* {
+  box-sizing: border-box;
+
+}
+.header{	
+	padding: 56px 0 0;
+	/*background-color: skyblue;*/
+	position: relative;
+	top:10px;
+	background-color: mediumseagreen;
+}
+
+	
+.header  li {
+	display: inline;
+	list-style: none;
+	margin: 25px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	position: relative;
+	bottom:20px;
+}
+.header   a {
+	color: #252525;
+	display: inline;
+	float: right;
+	padding-right: 20px;
+	font-family: "Arial Black", Gadget, sans-serif;
+	font-size: 14px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.header  li a:hover {
+	color: pink;
+}
+.pdfdisplay{
+	background-color: rgb(15, 25, 36);
+	display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 30px;
+    padding: 10px;
+ }
+.griditem {
+  padding: 20px;
+  width: 100%;
+}
+.griditem p{
+	font-size: 15px;
+    text-align: left;
+    color: white;
+}
+.pdfdisplay  div a img{
+	color: #252525;
+	width: 50%;
+	transition: width 1s
+	max-height:100%;
+}
+.pdfdisplay  div a img:hover{
+    width: 55%;
+}
+
+.title{
+	font-family: "Goudy Bookletter 1911", sans-serif;
+	text-transform: capitalize;
+	background-color: tomato;
+}
+
+
+
+input[type=text]:focus{
+    border: none;
+    outline: none;
+}
+input[type=submit]{
+    padding: 10px;
+    background-color: rgb(35, 197, 143);
+    border: none;
+    border-radius: 20px;
+    color: white;
+    margin: 4px,2px;
+    position: fixed;
+    bottom:53px;
+    right:  60px;
+
+}
+input[type=submit]:focus{
+    outline: none;
+    background-color: black;
+}
+
+.pdfupload form input[type=text]{
+	padding:10px;
+    margin:3px 0;
+    border: 0;
+    border-bottom:1px solid #eee;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius: 20px;
+    width: 10%;
+    position: relative;
+    top:50px;
+    right: 5px;
+    background-color:  skyblue;
+
+}
+.pdfupload form input[type=submit]{
+	padding: 10px;
+    background-color: rgb(35, 197, 143);
+    border: none;
+    border-radius: 20px;
+    color: white;
+    margin: 4px,2px;
+    position: relative;
+    top:55px;
+    left: 10px;
+}
+.pdfupload form input[type=file]{
+	position: relative;
+	top:53px;
+    left: 10px;
+}
+
+.department ul li{
+	list-style: none;
+	background-color: grey;
+	font-family: "Arial Black", Gadget, sans-serif;
+	font-size: 14px;
+	padding: 0 10px;
+	margin-top: 10px;
+}
+.department ul li a{
+	text-decoration: none;
+	text-transform: uppercase;
+	color: white;
+}
+.department ul li:hover{
+	background-color: black;
+	color: yellow;
+}
+.department ul li a:hover{
+	color: yellow;
+}
+.feedback form{
+	padding: 10px;
+}
+.feedback form input[type=text]{
+	border-bottom:1px solid #eee;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius: 20px;
+    border: 0;
+    background-color: lightgrey;
+}
+.feedback textarea{
+	border-bottom:1px solid #eee;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius: 20px;
+    border: 0;
+    background-color: lightgrey;
+    margin-left: 5px;
+}
+.feedback textarea:focus{
+	border: none;
+    outline: none;
+}
+.feedback form input[type=submit]{
+	position: relative;
+    top:220px;
+    left: 0px;
+}
+.fbdetails {
+
+}
+.bio{
+	margin: 10px;
+}
+.bio h4{
+	color: tomato;
+}
+.fbdetails ul p{
+	font-family: "Arial Black", Gadget, sans-serif;
+	
+}
+.fbdetails ul li{
+	list-style: none;
+}
+.fbdetails {
+  background-color: rgba(247, 202, 201,0.4);
+  width: 300px;
+  padding: 50px;
+  margin: 20px;
+  border-radius: 25px;
+
+}

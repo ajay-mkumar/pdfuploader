@@ -1,0 +1,197 @@
+* {
+    box-sizing:border-box;
+}
+body{
+
+    background-color: rgba(247, 202, 201,0.3)
+
+}
+.user a{
+    color: black;
+    text-decoration: none;
+    font-family: 'Times New Roman', serif;
+    padding: 5px;
+    text-transform: uppercase;
+    transition: width 2s;
+}
+.user a:hover{
+    text-decoration: underline;
+}
+.user a:visited{
+    text-decoration: underline;
+    color: green;
+    background-color: rgba(0,255,255,0.5);
+}
+.user a[tabindex]:visited {
+    background-color: rgba(0,255,255,0.5);
+    color: green;
+
+}
+.user{
+    position: relative;
+    top: 200px;
+    
+}
+.message p{
+    font-family: 'Times New Roman', serif;
+}
+input[type=text]{
+    padding:10px;
+    margin:10px 0;
+    border: 0;
+    border-bottom:1px solid #eee;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius: 20px;
+    width: 100%;
+
+}
+input[type=text]:focus{
+    border: none;
+    outline: none;
+}
+input[type=text]:focus{
+    border: none;
+    outline: none;
+}
+input[type=password]{
+    padding:10px;
+    width: 100%;
+    margin:10px 0;
+    border: 0;
+    border-bottom:1px solid #eee;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius: 20px;
+}
+input[type=password]:focus{
+    outline: none;
+}
+input[type=email]:focus{
+    outline: none;
+}
+input[type=email]{
+    padding:10px;
+    margin:10px 0;
+    border: 0;
+    border-bottom:1px solid #eee;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius: 20px;
+    width: 100%;
+}
+input[type=submit]{
+    padding: 10px;
+    background-color: rgb(35, 197, 143);
+    border: none;
+    border-radius: 20px;
+    color: white;
+    margin: 4px,2px;
+}
+input[type=submit]:focus{
+    outline: none;
+    
+}
+div{
+    display: block;
+    text-align: center;
+}
+form{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+
+    
+}
+.background form{
+  background-color: rgba(247, 202, 201,0.4);
+  width: 300px;
+  padding: 50px;
+  margin: 20px;
+  margin-top: 170px;
+  border-radius: 25px;
+}
+form p{
+    margin-top: 50px;
+}
+/*form a{
+    margin-top: 40px;
+    color:white;
+    background-color: crimson;
+    padding: 14px 25px;
+    text-align: center;
+    border-radius: 10px;
+    text-decoration: none;
+    transform: scale(10);
+    transition: all 0.3s ease-in-out 0.2s;
+}*/
+form a:hover{
+    color: black;
+    transform: scale(10);
+    transition: all 0.3s ease-in-out 0.2s;
+    background-color: cadetblue;
+}
+nav ul{
+    list-style: none;
+    color: white;
+    margin-top: 10;
+   overflow: hidden;
+   background-color: tomato;
+
+}
+nav  li{
+    float: left;
+    text-align: center;
+    padding: 14px 16px; 
+    
+}
+nav li a{
+    text-decoration: none;
+    color: white;
+    padding: 14px,16px;
+    display: block;
+}
+nav li a:hover{
+    background-color: black;
+}
+table{
+    background-color: white;
+    border-collapse: collapse;
+}
+th {
+    background-color:black;
+    color: white;
+    opacity: 0.5;
+}
+td{
+    text-align: center;
+}
+th td{
+    border-bottom: 1px solid #ddd;
+  }
+.sub input[type=button]{
+    background-color: brown;
+    margin-top: 10px;
+    margin-right: 15px;
+    padding:10px;
+    border: none;
+    border-radius: 120px;
+    text-align: center;
+}
+input[type=button]:focus{
+    outline: none;
+}
+.top p{
+    font-family: "Arial Black", Gadget, sans-serif;
+    text-transform: uppercase;
+    position: relative;
+    top:  220px;
+    font-size: 20px;
+}
+.reset a{
+    text-decoration: none;
+    color:rgb(35, 197, 143);
+    position: static;
+    top: 380px;
+    right: 630px;
+}
+.reset a:hover{
+    color: black;
+}
