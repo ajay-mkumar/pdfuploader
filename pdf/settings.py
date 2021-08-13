@@ -26,9 +26,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-eb6$-4&h3xtoa8#f11xw2=xg_-h=lw#oj4y-_z%*@@fs_f4d*8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['pdfuploader-avc.herokuapp.com','127:0:0:1']
+ALLOWED_HOSTS = ['pdfuploader-avc.herokuapp.com','127:0:0:1','localhost']
 
 
 # Application definition
@@ -78,19 +78,11 @@ WSGI_APPLICATION = 'pdf.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-'''DATABASES = {
+DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'PASSWORD': '0911',
-        'HOST': 'localhost',
-        'PORT':'5432'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR,'db.sqlite3'),
     }
-}'''
-
-DATABASES={
-    'default':dj_database_url.config()
 }
 
 # Password validation
