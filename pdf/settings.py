@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-import os,environ,dj_database_url,django_heroku
+import os,environ
 
 from pathlib import Path
 
@@ -131,7 +131,7 @@ STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles')
 
 MEDIA_URL='/media/'
 MEDIA_ROOT=os.path.join(BASE_DIR,'media')
-django_heroku.settings(locals())
+
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
