@@ -3,7 +3,7 @@
 <div>
         <title>studentregister</title>
         <div class="user">
-        <a href="{% url 'staffregister'%}" tabindex="1"  >staff</a>
+        <a href="{% url 'staffregister'%}"   >staff</a>
         <a href="{% url 'register'%}" tabindex="1" >student</a>
     </div>
 <div class="background">
@@ -22,7 +22,9 @@
 <div class="message">
         {% for i in messages %}
 
-        <p>{{i}}</p>
+       
+
+      <p>{{i}}</p> 
         {% endfor %}
 </div>
 </div>
