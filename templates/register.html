@@ -3,7 +3,7 @@
 <div>
         <title>studentregister</title>
         <div class="user">
-        <a href="{% url 'staffregister'%}"   >staff</a>
+        <a href="{% url 'staffregister'%}">staff</a>
         <a href="{% url 'register'%}" tabindex="1" >student</a>
     </div>
 <div class="background">
@@ -21,10 +21,15 @@
 </div>
 <div class="message">
         {% for i in messages %}
-
+     
        
 
-      <p>{{i}}</p> 
+      <p id='messages'>{{i}}</p>
+      <script>
+              let i;
+              i=document.getElementById('messages');
+              window.alert(i);
+      </script>
         {% endfor %}
 </div>
 </div>
